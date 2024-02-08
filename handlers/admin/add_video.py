@@ -64,4 +64,3 @@ async def commit_data(message: types.Message, state: FSMContext):
     await add_video_in_database(user_data['code'], user_data['file_id'])
     await message.answer(f"Видео под кодом {user_data['code']} успешно добавлено")
     await state.clear()
-
