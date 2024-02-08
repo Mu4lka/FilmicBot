@@ -9,12 +9,12 @@ def get_config(path):
         with open(path, 'w') as config_path:
             config = {
                 "bot_token": "BOT_TOKEN",
-                "admin_ids": "0000000000, 1111111111",
-                "group_chat_id": "@group_chat_id (or 0000000001)"
+                "admin_ids": [1000000000, 1111111111],
+                "group_chat_id": "@group_chat_id"
             }
             json.dump(config, config_path)
             print(f"Не нашел файл {path}, в следствии чего он был создан, "
-                  f"теперь поменяйте в нем данные и перезапустите приложение")
+                  f"поменяйте в нем данные и перезапустите приложение")
         keyboard.read_key()
         sys.exit()
 
